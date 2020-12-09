@@ -1,3 +1,10 @@
+var http = require('http');
+
+var hostname = '127.0.0.1';
+var port = process.env.PORT || 1337;
+
+
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
@@ -28,6 +35,6 @@ app.use((err, req, res, next) => {
   res.render('error');
 });
 
-app.listen(3000, () => {
-    console.log('The application is running on localhost:3000!')
+app.listen(port, () => {
+    console.log('The application is running on ' + hostname + ":" + port +'!')
 });
