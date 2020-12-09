@@ -1,9 +1,5 @@
 var http = require('http');
-
-var hostname = '127.0.0.1';
-var port = process.env.PORT || 1337;
-
-
+var port = process.env.PORT || 1339;
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -36,5 +32,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(port, () => {
-    console.log('The application is running on ' + hostname + ":" + port +'!')
+    console.log('The application is running on ' + port +'!')
 });
